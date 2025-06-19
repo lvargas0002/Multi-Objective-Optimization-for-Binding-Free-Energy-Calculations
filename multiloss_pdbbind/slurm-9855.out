@@ -1,0 +1,62 @@
+Starting job at Tue Apr 29 12:12:00 PDT 2025
+Working directory: /home/lthoma21/BFE-Loss-Function
+Python version: Python 3.10.11
+/var/spool/slurmd/job09855/slurm_script: line 18: nvidia-smi: command not found
+GPU information: nvidia-smi not available
+2025-04-29 12:12:01.866319: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-04-29 12:12:02.231612: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+No normalization for SPS. Feature removed!
+No normalization for AvgIpc. Feature removed!
+No normalization for NumAmideBonds. Feature removed!
+No normalization for NumAtomStereoCenters. Feature removed!
+No normalization for NumBridgeheadAtoms. Feature removed!
+No normalization for NumHeterocycles. Feature removed!
+No normalization for NumSpiroAtoms. Feature removed!
+No normalization for NumUnspecifiedAtomStereoCenters. Feature removed!
+No normalization for Phi. Feature removed!
+Skipped loading modules with pytorch-geometric dependency, missing a dependency. No module named 'torch_geometric'
+Skipped loading modules with transformers dependency. No module named 'transformers'
+cannot import name 'HuggingFaceModel' from 'deepchem.models.torch_models' (/home/lthoma21/.local/lib/python3.10/site-packages/deepchem/models/torch_models/__init__.py)
+Skipped loading modules with pytorch-geometric dependency, missing a dependency. cannot import name 'DMPNN' from 'deepchem.models.torch_models' (/home/lthoma21/.local/lib/python3.10/site-packages/deepchem/models/torch_models/__init__.py)
+Skipped loading modules with pytorch-lightning dependency, missing a dependency. No module named 'lightning'
+Skipped loading some Jax models, missing a dependency. No module named 'jax'
+2025-04-29 12:12:28.607878: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/calstatela/amber-22/amber22/lib:/opt/rh/gcc-toolset-11/root/usr/lib64:/opt/rh/gcc-toolset-11/root/usr/lib:/opt/rh/gcc-toolset-11/root/usr/lib64/dyninst:/opt/rh/gcc-toolset-11/root/usr/lib/dyninst:/opt/nvidia/cuda/cuda-11.6/lib64
+2025-04-29 12:12:28.611005: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2025-04-29 12:12:28.613365: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node02.cluster): /proc/driver/nvidia/version does not exist
+2025-04-29 12:12:28.616850: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+---------- Hyperparameter combinations ------------
+Epoch : 500;  physics_weight: 0.0005;
+Epoch 1/500
+WARNING:tensorflow:From /opt/calstatela/mambaforge/lib/python3.10/site-packages/tensorflow/python/autograph/pyct/static_analysis/liveness.py:83: Analyzer.lamba_check (from tensorflow.python.autograph.pyct.static_analysis.liveness) is deprecated and will be removed after 2023-09-23.
+Instructions for updating:
+Lambda fuctions will be no more assumed to be used in the statement where they are used, or at least in the same block. https://github.com/tensorflow/tensorflow/issues/56089
+1/1 [==============================] - ETA: 0s - loss: 49.11421/1 [==============================] - 129s 129s/step - loss: 49.1142
+Epoch 2/500
+1/1 [==============================] - ETA: 0s - loss: 515.19151/1 [==============================] - 46s 46s/step - loss: 515.1915
+Epoch 3/500
+1/1 [==============================] - ETA: 0s - loss: 99.04331/1 [==============================] - 46s 46s/step - loss: 99.0433
+Epoch 4/500
+1/1 [==============================] - ETA: 0s - loss: 441.42911/1 [==============================] - 47s 47s/step - loss: 441.4291
+Epoch 5/500
+1/1 [==============================] - ETA: 0s - loss: 563.19561/1 [==============================] - 46s 46s/step - loss: 563.1956
+Epoch 6/500
+1/1 [==============================] - ETA: 0s - loss: 465.41641/1 [==============================] - 49s 49s/step - loss: 465.4164
+Epoch 7/500
+1/1 [==============================] - ETA: 0s - loss: 231.87251/1 [==============================] - 48s 48s/step - loss: 231.8725
+Epoch 8/500
+1/1 [==============================] - ETA: 0s - loss: 104.05931/1 [==============================] - 46s 46s/step - loss: 104.0593
+Epoch 9/500
+1/1 [==============================] - ETA: 0s - loss: 247.44551/1 [==============================] - 47s 47s/step - loss: 247.4455
+Epoch 10/500
+1/1 [==============================] - ETA: 0s - loss: 251.34591/1 [==============================] - 46s 46s/step - loss: 251.3459
+Epoch 11/500
+1/1 [==============================] - ETA: 0s - loss: 146.2697Restoring model weights from the end of the best epoch: 1.
+1/1 [==============================] - 47s 47s/step - loss: 146.2697
+Epoch 11: early stopping
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 11s 11s/step
+1/1 [==============================] - ETA: 0s - loss: 491.99681/1 [==============================] - 12s 12s/step - loss: 491.9968
+The mean absolute difference between y_tru & y_pred is : 440.7519778024678
+Results saved to model_results
+Job completed at Tue Apr 29 12:22:59 PDT 2025

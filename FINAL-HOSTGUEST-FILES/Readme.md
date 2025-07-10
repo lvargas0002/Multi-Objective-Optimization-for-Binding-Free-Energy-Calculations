@@ -1,5 +1,11 @@
 # Binding Free Energy Calculation (ΔΔG) Notebooks:
-1. `BFE_LossFunction_submitted.ipynb` : This notebook implements a machine learning pipeline for predicting binding free energy (ΔΔG) using a hybrid physics-guided rule-based graph convolutional neural network (PG-RGCN) model with a multi-objective loss function. The workflow integrates molecular feature extraction, data preprocessing, model definition, training, evaluation, and visualization, with a focus on incorporating both empirical and physics-based loss components to enhance model physical consistency.
+1. `BFE_LossFunction_submitted.ipynb`: This notebook implements a machine learning pipeline for predicting binding free energy (ΔΔG) using a hybrid physics-guided rule-based graph convolutional neural network (PG-RGCN) model with and without using the multi-objective loss function. The workflow integrates molecular feature extraction, data preprocessing, model definition, training, evaluation, and visualization, with a focus on incorporating both empirical and physics-based loss components to enhance model's physical consistency, and comparing the results to a model where the loss function is not used.
+2. `BFE_without_multi_loss.ipynb`
+   
+# Entropy Calculation (TΔS) Notebooks:
+1. `NMA_entropy_submitted.ipynb`: Similarly, this notebook implements the ML pipeline for predicting entropy using PG-RGCN model.
+2. `NMA_entropy_with_multi_loss.ipynb`
+3. `NMA_entropy_without_multi_loss.ipynb`
 
  ### Main Features
       1. Data Preparation: 
@@ -31,7 +37,7 @@
       •	Generates scatter plots comparing predicted vs. experimental ΔΔG.
 
       6. Baseline Comparison:
-      •	Includes a section for training and evaluating the model without the physics-based loss for direct comparison.
+      •	Includes a section for training and evaluating the model without the multi-objective loss for direct comparison.
 
 ### Usage
 •	Dependencies: Requires TensorFlow, Keras, RDKit, DeepChem, NumPy, pandas, matplotlib, and scikit-learn.

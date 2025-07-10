@@ -1,5 +1,5 @@
 # Binding Free Energy Calculation (ΔΔG) Notebooks:
-1. BFE_LossFunction_submitted.ipynb : This notebook implements a machine learning pipeline for predicting binding free energy (ΔΔG) using a hybrid physics-guided rule-based graph convolutional neural network (PG-RGCN) model with a multi-objective loss function. The workflow integrates molecular feature extraction, data preprocessing, model definition, training, evaluation, and visualization, with a focus on incorporating both empirical and physics-based loss components to enhance model physical consistency.
+1. `BFE_LossFunction_submitted.ipynb` : This notebook implements a machine learning pipeline for predicting binding free energy (ΔΔG) using a hybrid physics-guided rule-based graph convolutional neural network (PG-RGCN) model with a multi-objective loss function. The workflow integrates molecular feature extraction, data preprocessing, model definition, training, evaluation, and visualization, with a focus on incorporating both empirical and physics-based loss components to enhance model physical consistency.
 
  ### Main Features
       1. Data Preparation: 

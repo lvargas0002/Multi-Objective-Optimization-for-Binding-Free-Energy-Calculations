@@ -40,6 +40,7 @@ class RuleGraphConvLayer(tf.keras.layers.Layer):
         else:
             self.combination_rules.append([[start_index, end_index], rule])
 
+    @tf.function
     def _call_single(self, inp):
         features = inp
 
@@ -70,7 +71,6 @@ class RuleGraphConvLayer(tf.keras.layers.Layer):
             nei_conv_features = tf.TensorArray(size=features.get_shape()[0], dynamic_size=True, dtype=tf.float32)
 
             c = lambda i, nei_conv_features: tf.less(i, features.get_shape()[0])
-
             def b(i, nei_conv_features):
                 new_ordered_features = tf.TensorArray(size=features.get_shape()[0], dynamic_size=True, dtype=tf.float32,
                                                       clear_after_read=False, infer_shape=False)
@@ -137,7 +137,8 @@ class ConvLayer(tf.keras.Model):
         self.num_features = num_features
         self.w = tf.Variable(tf.initializers.glorot_uniform()
                              (shape=[num_features, out_channel]), shape=[num_features, out_channel], trainable=True, name='w_cl')
-
+   
+    @tf.function
     def _call_single(self, inp):
         out = tf.zeros(shape=[1, self.out_channel], dtype=tf.float32)
         for feature in inp:
@@ -185,7 +186,8 @@ class GraphConvLayer(tf.keras.layers.Layer):
                 new_features[i] = new_features[i][0]
                 if self.activation_fn != None:
                     new_features[i] = self.activation_fn(new_features[i])
-        return ([tf.Variable(new_features, trainable=False), adjacency_list])
+        print()
+        return ([tf.Variable(new_features, trainable=False),tf.print("Hello from mobley layer Output features:", new_features, summarize=5),  adjacency_list])
 
     def call(self, inputs):
         output = []
